@@ -45,20 +45,20 @@ const FEATURES = [
     ),
   },
   {
-    title: "Price Increase Alerts",
-    description: "Get notified when a service raises its price so you can decide if it's still worth it.",
+    title: "History Tracking",
+    description: "See what you've canceled and how much you've saved over time. Your complete subscription history, always available.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
   {
-    title: "Spending Reports",
-    description: "See your monthly and yearly subscription spending at a glance. Understand where your money goes.",
+    title: "Quick Add",
+    description: "Add popular services instantly with preset chips. Netflix, Spotify, and dozens more — one tap to start tracking.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
@@ -66,7 +66,7 @@ const FEATURES = [
 
 const HOW_IT_WORKS = [
   { step: "1", title: "Add Your Subscriptions", description: "Manually add your trials and subscriptions — name, price, renewal date. Takes 30 seconds each." },
-  { step: "2", title: "Set Your Reminders", description: "Choose when to be reminded — 1 day, 3 days, or a week before each renewal." },
+  { step: "2", title: "Set Your Reminders", description: "Choose when to be reminded — 7, 3, 1, or 0 days before each renewal at 9:00 AM local time." },
   { step: "3", title: "Cancel or Keep", description: "When a reminder fires, decide: cancel using our step-by-step guide, or keep and track the next renewal." },
 ];
 
@@ -74,7 +74,7 @@ const COMPARISONS = [
   { feature: "Bank account required", them: "Yes", us: "Never" },
   { feature: "Data stored on servers", them: "Yes", us: "No — device only" },
   { feature: "Sells your data", them: "Often", us: "Never" },
-  { feature: "Cancel guides included", them: "Sometimes", us: "50+ guides" },
+  { feature: "Cancellation links included", them: "Sometimes", us: "Yes + 50 web guides" },
   { feature: "Hidden fees", them: "35-60% of savings", us: "$0 hidden fees" },
   { feature: "Works without internet", them: "No", us: "Yes" },
 ];
