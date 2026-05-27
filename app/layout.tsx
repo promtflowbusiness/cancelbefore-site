@@ -68,8 +68,8 @@ export const metadata: Metadata = {
   },
   appLinks: {
     ios: {
-      url: "https://apps.apple.com/app/cancelbefore",
-      app_store_id: "id123456789",
+      url: "https://apps.apple.com/us/app/cancelbefore/id6767471882",
+      app_store_id: "id6767471882",
       app_name: "CancelBefore",
     },
   },

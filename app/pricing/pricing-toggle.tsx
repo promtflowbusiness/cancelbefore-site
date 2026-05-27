@@ -93,7 +93,7 @@ export default function PricingToggle() {
           </div>
 
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
             className="mt-8 block w-full rounded-xl border border-slate-200 bg-white px-6 py-3 text-center text-base font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
           >
             Download Free
@@ -135,7 +135,7 @@ export default function PricingToggle() {
           )}
 
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
             className="mt-8 block w-full rounded-xl bg-indigo-600 px-6 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
           >
             Start Free Trial

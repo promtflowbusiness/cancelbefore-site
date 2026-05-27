@@ -108,7 +108,7 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
               className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-600/25 hover:bg-indigo-700 hover:shadow-indigo-600/30 transition-all"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -332,7 +332,7 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-col items-center gap-4">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
               className="inline-flex items-center gap-3 rounded-xl bg-black px-8 py-4 text-white shadow-lg hover:bg-gray-800 transition-colors"
             >
               <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">

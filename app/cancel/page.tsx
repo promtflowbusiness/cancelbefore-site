@@ -53,7 +53,7 @@ export default function CancelGuidesPage() {
             charges hit -- no bank linking, 100% private.
           </p>
           <a
-            href="#download"
+            href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
             className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 transition-colors"
           >
             <svg

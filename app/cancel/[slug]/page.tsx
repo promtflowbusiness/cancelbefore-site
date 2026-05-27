@@ -225,7 +225,7 @@ export default async function CancelGuidePage({
               charge again.
             </p>
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
               className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 transition-colors"
             >
               <svg

@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2">
               <li><Link href="/pricing" className="text-sm text-slate-500 hover:text-slate-700">Pricing</Link></li>
               <li><Link href="/cancel" className="text-sm text-slate-500 hover:text-slate-700">Cancel Guides</Link></li>
-              <li><a href="#download" className="text-sm text-slate-500 hover:text-slate-700">Download</a></li>
+              <li><a href="https://apps.apple.com/us/app/cancelbefore/id6767471882" className="text-sm text-slate-500 hover:text-slate-700">Download</a></li>
             </ul>
           </div>
 

@@ -27,7 +27,7 @@ export default function Nav() {
             Privacy
           </Link>
           <a
-            href="#download"
+            href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
             className="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
           >
             Download Free
@@ -64,7 +64,7 @@ export default function Nav() {
               Privacy
             </Link>
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/cancelbefore/id6767471882"
               className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700"
             >
               Download Free
