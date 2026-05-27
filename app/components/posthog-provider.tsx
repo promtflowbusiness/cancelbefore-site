@@ -37,6 +37,7 @@ export default function PostHogProvider({
       capture_pageview: false,
       persistence: "localStorage",
       disable_session_recording: true,
+      respect_dnt: true,
     });
   }, []);
 

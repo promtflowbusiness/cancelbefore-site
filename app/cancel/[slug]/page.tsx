@@ -2,25 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services, getServiceBySlug, getServicesByCategory } from "../data";
-
-const DIFFICULTY_COLORS = {
-  easy: "bg-green-100 text-green-800",
-  medium: "bg-yellow-100 text-yellow-800",
-  hard: "bg-red-100 text-red-800",
-};
-
-const CATEGORY_LABELS: Record<string, string> = {
-  streaming: "Streaming",
-  music: "Music",
-  fitness: "Fitness",
-  software: "Software",
-  gaming: "Gaming",
-  news: "News",
-  food: "Food & Delivery",
-  cloud: "Cloud Storage",
-  productivity: "Productivity",
-  other: "Other",
-};
+import { DIFFICULTY_COLORS, CATEGORY_LABELS } from "../constants";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -34,15 +16,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) {
-    return { title: "Guide Not Found | CancelBefore" };
+    return { title: "Guide Not Found" };
   }
 
-  const title = `How to Cancel ${service.name} -- Step by Step Guide | CancelBefore`;
+  const title = `How to Cancel ${service.name} — Step by Step Guide`;
   const description = `Cancel your ${service.name} subscription in ${service.steps.length} easy steps. ${service.monthlyPrice}/month. Difficulty: ${service.difficulty}. Complete guide with tips.`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://cancelbefore.app/cancel/${slug}`,
+    },
     openGraph: {
       title,
       description,

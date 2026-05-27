@@ -2,32 +2,23 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { Service, Category } from "./data";
+import type { Category, Difficulty } from "./data";
 
-const DIFFICULTY_COLORS = {
-  easy: "bg-green-100 text-green-800",
-  medium: "bg-yellow-100 text-yellow-800",
-  hard: "bg-red-100 text-red-800",
+type FilterService = {
+  slug: string;
+  name: string;
+  category: Category;
+  monthlyPrice: string;
+  difficulty: Difficulty;
 };
 
-const CATEGORY_LABELS: Record<Category, string> = {
-  streaming: "Streaming",
-  music: "Music",
-  fitness: "Fitness",
-  software: "Software",
-  gaming: "Gaming",
-  news: "News",
-  food: "Food & Delivery",
-  cloud: "Cloud Storage",
-  productivity: "Productivity",
-  other: "Other",
-};
+import { DIFFICULTY_COLORS, CATEGORY_LABELS } from "./constants";
 
 export default function CancelGuidesFilter({
   services,
   categories,
 }: {
-  services: Service[];
+  services: FilterService[];
   categories: Category[];
 }) {
   const [query, setQuery] = useState("");
@@ -66,6 +57,7 @@ export default function CancelGuidesFilter({
             placeholder="Search for a service (e.g., Netflix, Spotify)..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            aria-label="Search cancel guides"
             className="w-full rounded-xl border border-slate-200 bg-white py-3.5 pl-12 pr-4 text-sm text-slate-900 placeholder:text-slate-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
           />
         </div>

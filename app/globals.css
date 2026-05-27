@@ -19,3 +19,10 @@ html {
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

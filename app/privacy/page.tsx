@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-const LAST_UPDATED = "May 11, 2026";
+const LAST_UPDATED = "May 27, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -50,13 +50,38 @@ export default function PrivacyPage() {
             <p>
               CancelBefore is a personal subscription-tracking app. It is
               designed to be quiet, useful, and private. We do not run user
-              accounts, we do not collect analytics, and we do not sell any
-              data. The information you enter about your subscriptions stays
-              on your device.
+              accounts and we do not sell any data. The information you enter
+              about your subscriptions stays on your device.
             </p>
           </Section>
 
-          <Section title="Information We Collect">
+          <Section title="The iOS App">
+            <p>
+              The CancelBefore iOS app does not collect analytics, does not
+              use third-party tracking SDKs, and does not transmit your
+              subscription data to any server. All data stays on your device.
+            </p>
+          </Section>
+
+          <Section title="The Website (cancelbefore.app)">
+            <p>
+              Our website uses PostHog, a privacy-focused analytics tool, to
+              understand how visitors use the site (pages visited, general
+              traffic patterns). PostHog does not track you across other
+              websites, and we do not collect personal information through
+              it. We respect your browser&apos;s Do Not Track setting — if
+              enabled, PostHog will not load. No data from the website is
+              connected to the iOS app.
+            </p>
+            <p>
+              If you subscribe to our newsletter via the website, your email
+              address is stored with Resend, our email service provider, for
+              the sole purpose of sending you subscription-saving tips. You
+              can unsubscribe at any time.
+            </p>
+          </Section>
+
+          <Section title="Information the App Collects">
             <p>
               CancelBefore stores the subscription and trial information you
               enter — service name, price, renewal date, billing frequency,
@@ -66,9 +91,8 @@ export default function PrivacyPage() {
               that receives or stores it. We do not have access to it.
             </p>
             <p>
-              We do not collect your name, email address, location, contacts,
-              advertising identifier, or any device identifier. We do not use
-              third-party analytics or tracking SDKs.
+              We do not collect your name, location, contacts,
+              advertising identifier, or any device identifier.
             </p>
           </Section>
 
