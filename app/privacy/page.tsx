@@ -2,16 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — CancelBefore",
+  title: "Privacy Policy",
   description:
     "How CancelBefore handles the data you enter, notifications, purchases, and your privacy.",
+  openGraph: {
+    title: "Privacy Policy — CancelBefore",
+    description:
+      "How CancelBefore handles the data you enter, notifications, purchases, and your privacy.",
+    url: "https://cancelbefore.app/privacy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy — CancelBefore",
+    description:
+      "How CancelBefore handles the data you enter, notifications, purchases, and your privacy.",
+  },
+  alternates: {
+    canonical: "https://cancelbefore.app/privacy",
+  },
 };
 
 const LAST_UPDATED = "May 11, 2026";
 
 export default function PrivacyPage() {
   return (
-    <main className="flex-1 px-6 py-12 sm:py-16 bg-white">
+    <div className="px-6 py-12 sm:py-16">
       <article className="mx-auto max-w-2xl">
         <Link
           href="/"
@@ -146,15 +162,8 @@ export default function PrivacyPage() {
             </p>
           </Section>
         </div>
-
-        <footer className="mt-16 pt-8 border-t border-slate-200 text-sm text-slate-500">
-          <p>
-            &copy; {new Date().getFullYear()} CancelBefore. All rights
-            reserved.
-          </p>
-        </footer>
       </article>
-    </main>
+    </div>
   );
 }
 
