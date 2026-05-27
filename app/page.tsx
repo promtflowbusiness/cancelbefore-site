@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EmailCapture from "./components/email-capture";
+import PhoneMockup from "./components/phone-mockup";
 
 const STATS = [
   { value: "$219", label: "Average monthly subscription spend" },
@@ -148,6 +149,10 @@ export default function HomePage() {
             </span>
           </div>
         </div>
+
+        <div className="mt-16 flex justify-center">
+          <PhoneMockup />
+        </div>
       </section>
 
       {/* Stats */}
@@ -225,8 +230,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200">
-            <table className="w-full text-left text-sm">
+          <div className="mt-12 overflow-x-auto rounded-2xl border border-slate-200">
+            <table className="w-full min-w-[500px] text-left text-sm">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">
                   <th className="px-6 py-4 font-semibold text-slate-900">Feature</th>
@@ -248,33 +253,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Value Props */}
       <section className="bg-indigo-600 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Join Thousands Saving Money
+            Your Subscriptions, Your Device, Your Control
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-indigo-100">
-            People are tired of apps that demand bank access just to track subscriptions.
-            CancelBefore is the simple, private alternative.
+            No bank linking, no accounts, no data collection.
+            CancelBefore exists because subscription tracking shouldn&apos;t require giving up your privacy.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {[
-              { quote: "Finally an app that tracks my subscriptions without wanting my bank login. This is all I needed.", author: "Sarah M." },
-              { quote: "Saved me $89/month by showing me subscriptions I completely forgot about. The reminders actually work.", author: "James T." },
-              { quote: "I love that everything stays on my phone. No accounts, no data sharing, just a clean list of what I'm paying for.", author: "Priya K." },
-            ].map((testimonial) => (
-              <div key={testimonial.author} className="rounded-2xl bg-white/10 p-6 text-left backdrop-blur-sm">
-                <div className="flex gap-1 text-yellow-300">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              {
+                title: "100% On-Device",
+                description: "Your subscription data never leaves your phone. No servers, no sync, no cloud.",
+                icon: (
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                  </svg>
+                ),
+              },
+              {
+                title: "No Accounts Required",
+                description: "Open the app and start tracking. No sign-up, no email, no passwords.",
+                icon: (
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "One-Time Purchase",
+                description: "Pro is $4.99 once. No recurring fees, no subscription to forget about.",
+                icon: (
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-2xl bg-white/10 p-6 text-left backdrop-blur-sm">
+                <div className="text-indigo-200">
+                  {card.icon}
                 </div>
-                <p className="mt-3 text-sm text-white leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
-                <p className="mt-3 text-sm font-semibold text-indigo-200">{testimonial.author}</p>
+                <h3 className="mt-4 text-base font-bold text-white">{card.title}</h3>
+                <p className="mt-2 text-sm text-indigo-100 leading-relaxed">{card.description}</p>
               </div>
             ))}
           </div>
@@ -292,13 +317,21 @@ export default function HomePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            {["Netflix", "Spotify", "Amazon Prime", "Disney+", "Adobe CC", "Hulu"].map((name) => (
-              <span
-                key={name}
-                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm"
+            {[
+              { name: "Netflix", slug: "netflix" },
+              { name: "Spotify", slug: "spotify" },
+              { name: "Amazon Prime", slug: "amazon-prime" },
+              { name: "Disney+", slug: "disney-plus" },
+              { name: "Adobe CC", slug: "adobe-creative-cloud" },
+              { name: "Hulu", slug: "hulu" },
+            ].map((service) => (
+              <Link
+                key={service.slug}
+                href={`/cancel/${service.slug}`}
+                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm hover:border-indigo-200 hover:text-indigo-600 transition-colors"
               >
-                {name}
-              </span>
+                {service.name}
+              </Link>
             ))}
             <Link
               href="/cancel"

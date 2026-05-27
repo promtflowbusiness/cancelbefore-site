@@ -11,12 +11,11 @@ const FREE_FEATURES = [
 ];
 
 const PRO_FEATURES = [
-  { name: "Track up to 3 subscriptions", included: true },
+  { name: "Unlimited subscriptions", included: true },
   { name: "Renewal reminders", included: true },
   { name: "Local notifications", included: true },
   { name: "On-device storage (private)", included: true },
   { name: "Cancellation links", included: true },
-  { name: "Unlimited subscriptions", included: true },
   { name: "History tracking", included: true },
   { name: "Quick add presets", included: true },
   { name: "Color-coded urgency cards", included: true },

@@ -44,6 +44,14 @@ export const metadata: Metadata = {
     description:
       "Track subscriptions, get reminded before charges hit, and cancel with step-by-step guides. Privacy-first — no bank linking, no data collection.",
     url: "https://cancelbefore.app",
+    images: [
+      {
+        url: "/og?title=Stop+paying+for+subscriptions+you+forgot+about&subtitle=Track+subscriptions,+get+reminded+before+charges+hit,+and+cancel+with+step-by-step+guides.",
+        width: 1200,
+        height: 630,
+        alt: "CancelBefore — Privacy-first subscription tracking",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,9 +71,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://cancelbefore.app",
-  },
+  alternates: {},
   appLinks: {
     ios: {
       url: "https://apps.apple.com/us/app/cancelbefore/id6767471882",
@@ -88,8 +94,14 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-slate-900">
         <PostHogProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
           <Nav />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <Footer />
         </PostHogProvider>
       </body>

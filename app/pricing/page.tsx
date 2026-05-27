@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import PricingToggle from "./pricing-toggle";
 
 export const metadata: Metadata = {
-  title: "Pricing — CancelBefore",
+  title: "Pricing",
   description:
     "Choose the plan that fits your needs. Track subscriptions for free or unlock Pro for $4.99 — one-time, lifetime access.",
 };
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS: { question: string; answer: ReactNode }[] = [
   {
     question: "Is Pro really a one-time purchase?",
     answer:
@@ -25,8 +26,22 @@ const FAQ_ITEMS = [
   },
   {
     question: "What if I want a refund?",
-    answer:
-      "Since Pro is a one-time purchase, there is no subscription to cancel. If you need a refund, you can request one from Apple within their refund policy window by visiting reportaproblem.apple.com.",
+    answer: (
+      <>
+        Since Pro is a one-time purchase, there is no subscription to cancel.
+        If you need a refund, you can request one from Apple within their refund
+        policy window by visiting{" "}
+        <a
+          href="https://reportaproblem.apple.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-indigo-600 hover:text-indigo-700 underline underline-offset-2"
+        >
+          reportaproblem.apple.com
+        </a>
+        .
+      </>
+    ),
   },
 ];
 

@@ -4,11 +4,11 @@ import { services, categories } from "./data";
 import CancelGuidesFilter from "./filter";
 
 export const metadata: Metadata = {
-  title: "How to Cancel Any Subscription | CancelBefore",
+  title: "How to Cancel Any Subscription",
   description:
     "Step-by-step cancellation guides for 50+ popular subscription services. Find out exactly how to cancel Netflix, Spotify, Amazon Prime, and more.",
   openGraph: {
-    title: "How to Cancel Any Subscription | CancelBefore",
+    title: "How to Cancel Any Subscription",
     description:
       "Step-by-step cancellation guides for 50+ popular subscription services. Find out exactly how to cancel Netflix, Spotify, Amazon Prime, and more.",
     type: "website",
@@ -40,8 +40,13 @@ export default function CancelGuidesPage() {
           </p>
         </div>
 
-        {/* Filter (client component) */}
-        <CancelGuidesFilter services={services} categories={categories} />
+        {/* Filter (client component — only send fields needed for filtering) */}
+        <CancelGuidesFilter
+          services={services.map(({ slug, name, category, monthlyPrice, difficulty }) => ({
+            slug, name, category, monthlyPrice, difficulty,
+          }))}
+          categories={categories}
+        />
 
         {/* CTA Banner */}
         <div className="mt-16 rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-700 px-8 py-10 text-center text-white shadow-lg shadow-indigo-600/25 sm:px-12">

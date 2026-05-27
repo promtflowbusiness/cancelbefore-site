@@ -36,8 +36,10 @@ export default function Nav() {
 
         <button
           onClick={() => setOpen(!open)}
+          onKeyDown={(e) => { if (e.key === "Escape" && open) setOpen(false); }}
           className="inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 sm:hidden"
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? (
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
