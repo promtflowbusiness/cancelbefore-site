@@ -24,9 +24,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://cancelbefore.app/privacy",
-      lastModified: new Date("2026-05-27"),
+      lastModified: new Date("2026-05-28"),
       changeFrequency: "yearly",
       priority: 0.3,
+    },
+    {
+      url: "https://cancelbefore.app/press",
+      lastModified: new Date("2026-05-28"),
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
     {
       url: "https://cancelbefore.app/cancel",
