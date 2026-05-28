@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-const LAST_UPDATED = "May 27, 2026";
+const LAST_UPDATED = "May 28, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -57,9 +57,56 @@ export default function PrivacyPage() {
 
           <Section title="The iOS App">
             <p>
-              The CancelBefore iOS app does not collect analytics, does not
-              use third-party tracking SDKs, and does not transmit your
-              subscription data to any server. All data stays on your device.
+              The CancelBefore iOS app does not transmit your subscription
+              data to any server we operate. The information you enter about
+              your subscriptions stays on your device and, optionally, in
+              your private iCloud.
+            </p>
+            <p>
+              The app uses PostHog to collect anonymous interaction events
+              (which screens you visit, which buttons you tap) so we can
+              improve the product. We never attach your subscription content,
+              names, prices, or any personally identifiable information to
+              these events. We do not use any advertising or marketing
+              SDKs.
+            </p>
+          </Section>
+
+          <Section title="iCloud Sync (Pro feature)">
+            <p>
+              CancelBefore Pro can sync your subscription data across your
+              Apple devices using iCloud Key-Value Storage. When enabled,
+              your data is encrypted end-to-end by Apple and stored in your
+              personal iCloud account. CancelBefore does not have access to
+              the contents of your iCloud — only you and Apple do. Apple
+              does not share this data with us. You can disable iCloud sync
+              at any time in the app&apos;s Settings, and you can delete the
+              synced data from your iCloud at any time in iOS Settings →
+              your Apple ID → iCloud.
+            </p>
+          </Section>
+
+          <Section title="Camera and Photo Access (Pro feature)">
+            <p>
+              The Scan Import feature requests access to your camera (for
+              taking a photo of a billing email or receipt) and your photo
+              library (for selecting an existing screenshot). These
+              permissions are optional and are only requested the first time
+              you use the feature. You can grant or revoke them at any time
+              in iOS Settings → Privacy → Camera / Photos. Photos you
+              capture or select are processed on your device to extract
+              subscription details and are never uploaded to our servers or
+              any third party.
+            </p>
+          </Section>
+
+          <Section title="On-Device Text Recognition (Pro feature)">
+            <p>
+              Scan Import uses Google&apos;s ML Kit on-device text
+              recognition to read text from images you capture or select.
+              All processing happens locally on your device. The image, the
+              extracted text, and any subscription details parsed from it
+              are not transmitted to Google, to us, or to any third party.
             </p>
           </Section>
 
